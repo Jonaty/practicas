@@ -28,7 +28,8 @@ class AuthController extends Controller
             'password' => bcrypt($request->input('password')),
             'rol' => $roles,
     		]);
-
+    
+      return redirect()->route('login')->with('info2', 'Registro exitoso, espera que el coordinador de viajes active tu cuenta');
     	
     }
 
