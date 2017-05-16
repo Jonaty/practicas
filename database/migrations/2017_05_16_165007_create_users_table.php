@@ -16,6 +16,10 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->string('rol');
             $table->boolean('activo')->default(0);
+
+            //Llave foranea!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+            $table->integer('plantel_id')->unsigned();
+            $table->foreign('plantel_id')->references('id')->on('planteles')->onDelete('cascade');
             $table->rememberToken();
             $table->timestamps();
         });

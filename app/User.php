@@ -11,10 +11,15 @@ class User extends Authenticatable
 
 
     protected $fillable = [
-        'nom_completo', 'no_cuenta', 'email', 'password', 'rol'
+        'nom_completo', 'no_cuenta', 'email', 'password', 'rol', 'plantel_id'
     ];
 
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function plantel()
+    {
+    	return $this->belongsTo(Plantel::class);
+    }
 }

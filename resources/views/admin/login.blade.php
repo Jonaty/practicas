@@ -1,41 +1,14 @@
-@extends('modulos.plantilla')
+@extends('admin.modulos.plantilla')
 
-@section('title', 'Login')
+@section('title', 'Login Admin')
 
 @section('contenido')
 
 @if (Session::has('info'))
-	<div class="alert alert-danger">
-		{{ Session::get('info') }}
-	</div>
-@elseif(Session::has('info2'))
-    <div class="alert alert-success">
-    	{{ Session::get('info2') }}
-    </div>
+  <div class="alert alert-danger">
+    {{ Session::get('info') }}
+  </div>
 @endif
-
-{{-- <div class="col-md-4">
-	<h1>Login</h1>
-<fieldset>
-	
-	<form action="{{ route('datosLogin') }}" method="POST">
-	
-		{!! csrf_field() !!}
-
-		<div class="form-group">
-			<label for="no_cuenta">Numero de Trabajor</label>
-			<input type="text" name="no_cuenta" class="form-control">
-		</div>
-
-		<div class="form-group">
-			<label for="password">Contraseña</label>
-			<input type="password" name="password" class="form-control">
-		</div>
-
-		<button type="submit" class="btn btn-primary">Entrar</button>
-	</form>
-</fieldset>
-</div> --}}
 
 <div class="row-fluid">&nbsp;</div>
 <div class="row-fluid">&nbsp;</div>
@@ -44,10 +17,11 @@
 	<div class="row">&nbsp;</div>
     <div class="panel panel-info">
         <div class="panel-heading text-center" id="panel-log">
+        <h3 class="text-warning">Login Admin	</h3>
         	<big><big>Ingresa tus datos de acceso</big></big>
         </div>
         <div class="panel-body text-center">
-        	<form method="post" action="{{ route('datosLogin') }}">
+        	<form method="post" action="{{ route('datosLoginAdmin') }}">
 
         	{!! csrf_field() !!}
             	<div class="input-group input-group-lg">
@@ -81,11 +55,10 @@
                 </div> 
             </form>
 
-            <p>Eres Admin? <a href="{{ route('loginAdmin') }}">Entra aquí</a></p>
+            <p><a href="{{ route('login') }}">Atrás</a></p>
         </div>
     </div>
     	
     </div>
-
 
 @endsection
