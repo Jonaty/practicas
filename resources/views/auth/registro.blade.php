@@ -56,23 +56,23 @@
                  <div class="row">&nbsp;</div>
                 
                 <span class="input-group-addon">
-                                 <div class="form-group">
+                <div class="form-group">
                  	<div class="input-group input-group-lg">
-                 	<div class="radio">
+                 	<div class="radio-inline">
                  		<label>
                  			<input type="radio" name="rol" id="rol" value="1">
-                 			Director
+                 			Director Facultad
                  		</label>
                  	</div>
 
-                 	<div class="radio">
+                 	<div class="radio-inline">
                  		<label>
                  			<input type="radio" name="rol" id="rol" value="2">
-                 			Coordinador de Vinculación
+                 			Coordinador Vinculación
                  		</label>
                  	</div>
 
-                 	<div class="radio">
+                 	<div class="radio-inline">
                  		<label>
                  			<input type="radio" name="rol" id="rol" value="3">
                  			Docente
@@ -117,8 +117,7 @@
     </div>
     	
     </div>
-
-{{-- <h1>Registro</h1>
+<!--  <h1>Registro</h1>
 
 <div class="col-md-4">
 	<form action="{{ route('datosRegistro') }}" method="POST">
@@ -170,24 +169,6 @@
 
 	</form>
 </div>
- --}}
 
 @endsection
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ -->
